@@ -1,0 +1,64 @@
+:root{
+  --sidebar-width:230px;
+  --content-width:calc(100% - var(--sidebar-width));
+}
+
+.sidebar{
+  position: absolute;
+  width: var(--sidebar-width);
+  height: 100dvh;
+}
+
+.page-content{
+  height: 100dvh;
+  overflow-y: auto;
+  width: var(--content-width);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Tailwindcss Media Queries */
+
+/* SM */
+@media (min-width:640px){
+
+  .sidebar{
+      right: 0;
+      top: 0;
+      z-index: 100;
+  }
+  .page-content{
+    width: 100%;
+  }
+
+}
+
+/* MD */
+@media (min-width:768px){
+  
+}
+
+/* LG */
+@media (min-width:1024px){
+  .sidebar{
+      position: sticky;
+      top: 0;
+  }
+  .page-content{
+    width: var(--content-width);
+  }
+  body[dir=rtl] .sidebar{
+      direction: rtl;
+  }
+}
+
+/* XL */
+@media (min-width:1280px){
+  
+}
+
+/* 2XL */
+@media (min-width:1536px){
+  
+}
